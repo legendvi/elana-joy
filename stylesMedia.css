@@ -1,0 +1,117 @@
+/* Media queries */
+
+@media screen and (max-width:842px){
+    .hero {
+        width:100%
+    }
+  .hero-introduction p {
+    padding:3rem 5rem;
+  }
+    /* Burger Section */
+    .burger {
+        display:block;
+        position:relative;
+    }
+    .burger div{
+        padding:0.2rem 2rem;
+        background:var(--gray-text);
+        margin:0.5rem 0rem;
+        transition: all 1s ease-in-out;
+        z-index:1; 
+    }
+    .nav-link a {
+        color:white;
+        font-size:var(--header3);
+        text-decoration:underline;
+    }
+   
+    .nav-link {
+        background-color:var(--background-color);
+        width:100%;
+        height:100%;
+        position:fixed;
+        top:0;
+        left:100%;
+        flex-direction:column;
+        align-items:center;
+        transition: transform 1s ease;
+    }
+    /* .menu-check {
+        display:block;
+        position:absolute;
+        top:50%;
+        right:5%;
+        transform:translate(5%,-50%);
+        width:5rem;
+        height:5rem;
+        cursor:pointer;
+        opacity:0;
+        z-index:2; 
+    }
+
+    .menu-check:checked + .nav-link {
+    transform:translateX(-100%);
+    }
+    .menu-check:checked ~ .burger div {
+        background:white;
+    }
+    .menu-check:checked ~ .burger div:nth-child(1) {
+        transform:rotatez(45deg) translateY(300%);
+    }
+    .menu-check:checked ~ .burger div:nth-child(2) {
+       opacity:0;
+    }
+    .menu-check:checked ~ .burger div:nth-child(3) {
+        transform:rotatez(-45deg) translateY(-300%);
+    } */
+    .nav-open {
+        transform:translateX(-100%);
+    }
+    .toggle .line1 {
+        transform:rotatez(45deg) translateY(300%);
+        background-color:white;
+    }
+    .toggle .line2 {
+       opacity:0;
+    }
+    .toggle .line3 {
+        transform:rotatez(-45deg) translateY(-300%);
+        background-color:white;
+    }
+    /* about section */
+    .about-text div {
+        padding:3rem 3rem;
+    }
+    /* Gallery */
+    .gallery img {
+        grid-row:auto;
+        grid-column:auto;
+        width:93%;
+    }
+    .gallery {
+    grid-template-columns:repeat(auto-fit,minmax(30rem,1fr));
+    }
+    .gallery-head {
+        display:none;
+    }
+    footer ul {
+        order:1;
+    }
+    footer p {
+        order:2;
+        text-align:center;
+        padding:1rem;
+    }
+}
+
+@media screen and (min-width:1700px){
+    html{
+        --header1:3rem;
+        --header2:5rem;
+        --header3:4rem;
+        --header4:3rem;
+        --text:3rem;
+        --bigText:8rem;
+    }
+   
+}

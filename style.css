@@ -1,0 +1,263 @@
+
+.flex {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+/* Nav Section */
+.main-head {
+    z-index:1;
+    position:relative;
+    box-shadow:0px 10px 10px rgba(0,0,0,0.1);
+}
+nav{
+display:flex;
+align-items:center;
+min-height:1vh;
+padding: 2rem 0rem;
+width:90%;
+margin:auto;
+
+
+}
+#logo {
+    flex:1 1 20rem;
+}
+.nav-link {
+    display:flex;
+    justify-content:space-around;
+    flex:1 1 20rem;
+}
+
+body {
+    font-family:'Ruh1',sans-serif;
+    animation: opening 1s ease-in-out;
+}
+
+/* Hero Section */
+#hero {
+    width:95%;
+    min-height:90vh;
+    margin:0 0 0 auto;
+    display:flex;
+    flex-wrap:wrap;
+    overflow:hidden;
+
+}
+.hero-introduction {
+    flex:2 1 40rem;
+    text-align:center;
+
+}
+.hero-introduction p {
+    padding: 5rem 10rem;
+    color:var(--gray-text)
+
+}
+.hero-introduction h2 {
+    padding-top: 3rem;
+    
+}
+.hero-introduction a {
+    padding: 3rem 8rem;
+    border:1px solid black;
+    margin-bottom:3rem;
+    
+}
+.hero-image {
+    flex: 1 1 40rem;
+    width:100%;
+    background:linear-gradient(#dad8dd,#dad1d4);
+    position:relative;
+    z-index:0;
+}
+
+.hero-elena {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.plant {
+    position:absolute;chec
+    bottom:0;
+    width:100%;
+    height:100%;
+    left:-25%;
+    z-index:-1;
+    transform:translateY(-10%) rotatez(-10deg) rotatex(90deg);
+    animation:plant-entrance 1.5s ease-in-out 0.5s forwards,
+    plant-shake 2.5s infinite ease alternate-reverse 2s;
+    transform-origin:bottom;
+    max-height:80%;
+}
+.plant1 {
+    object-fit:contain;
+}
+.plant2 {
+    left:40%;
+}
+
+
+/* Animations */
+@keyframes opening {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@keyframes plant-entrance {
+    from {
+        transform:translateY(-10%) rotatez(-10deg) rotatex(90deg)
+    }
+    to {
+        transform:translateY(0%) rotatez(-10deg) rotatex(0deg)
+    }
+}
+
+@keyframes plant-shake {
+    from {
+        transform:rotatez(-5deg);
+    }
+    to{
+        transform:rotatez(0degs);
+    }
+}
+.burger,.menu-check {
+    cursor:pointer;
+    display:none;
+}
+
+/* About Section */
+.about {
+    min-height:100vh;
+    display:flex;
+    flex-wrap:wrap;
+}
+.about-image {
+    flex: 1 1 40rem;
+    position:relative;
+}
+.about-image img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.about-image h5 {
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translate(-50%, -20%);
+    letter-spacing:2rem;
+    color:white;
+    font-size:var(--header2)
+}
+.about-text {
+    background-color:var(--background-color);
+    flex: 2 1 40rem;
+    color:white;
+    justify-content:space-around;
+}
+.about-text div {
+    padding:3rem 8rem;
+}
+.about-text h3 {
+    padding:2rem 0rem;
+    font-family:'Ruh1 Medium'
+}
+.about-text h2 {
+    padding:4rem;
+    font-family:'GreatVibes'
+}
+
+/* Gallery */
+.gallery {
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    position:relative;
+}
+.gallery img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.gallery1 {
+    grid-column:1/3;
+}
+.gallery2 {
+    grid-column:3/4;
+    grid-row:1/3;
+}
+.gallery-head {
+    position:absolute;
+    background-color:var(--background-color);
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+    padding:5rem 8rem;
+}
+/* Contact section */
+.contact {
+    min-height:90vh;
+    display:flex;
+    flex-wrap:wrap;
+
+}
+.form-wrapper {
+    flex:3 1 40rem;
+    padding-bottom:5rem;
+}
+.form-wrapper span {
+    font-size:var(--bigText);
+    color:var(--special-color);
+}
+.form-wrapper h2 {
+    margin:5rem 0rem;
+}
+.form-wrapper label {
+    display:block;
+}
+.form-wrapper input {
+ display:block;
+ background-color:var(--background-color);
+ margin:3rem 0rem;
+ color:white;
+ border:none;
+ padding:1rem;
+}
+.form-wrapper button {
+    padding: 1rem 8rem;
+    background-color:var(--special-color);
+    width:100%;
+    border:none;
+    color:white;
+
+}
+.contact img {
+    flex:1 1 40rem;
+    height:100%;
+    width:100%;
+}
+/* footer section */
+footer {
+    display:flex;
+    flex-wrap:wrap;
+    background-color:var(--background-color);
+    color:white;
+    padding:3rem 5%;
+    align-items:center;
+}
+
+footer ul {
+    display:flex;
+    flex:1 1 40rem;
+    justify-content:space-between;
+}
+footer p {
+    flex: 4 1 40rem;
+}
